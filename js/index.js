@@ -9,7 +9,7 @@ new Vue({
     products: [
       {
         id: 1,
-        picture: 'images/sre.jpg',
+        picture:'images/FortressOfTheMuslimInvocations.png',
         name: "The Meghaduta of Kalidasa(Sanskrit)",
         description:
         "Meghadūta is a lyric poem written by Kālidāsa, considered to be one of the greatest Sanskrit poets.A poem of 111 stanzas, it is one of Kālidāsa's most famous works. The work is divided into two parts, Purva-megha and Uttara-megha",
@@ -18,7 +18,7 @@ new Vue({
       },
       {
         id: 2,
-        picture: 'images/bln.jpg',
+        picture: 'images/GreatWomenOfIslam.png',
         name: "Bilhaneeyam(Telugu)",
         description:
         "story of Bilhana, Who wrote vikramankadeva charitam in sanskrit.",
@@ -27,7 +27,7 @@ new Vue({
       },
       {
         id: 3,
-        picture: 'images/wpme.png',
+        picture: 'images/IslamicEmpires.jpg',
         name: "Word Power Made Easy",
         description:
         "For use in schools and libraries only. Exercises designed to develop vocabulary skills present words together with their pronunciations, definitions and use in sentences.",
@@ -36,7 +36,7 @@ new Vue({
       },
       {
         id: 4,
-        picture: 'images/mdsl.jpg',
+        picture: 'images/PurificationOfTheHeart.webp',
         name: "Madhushala",
         description:
         "Madhushala is a book of 135 quatrains: verses of four lines by Hindi poet and writer Harivansh Rai Bachchan.",
@@ -45,7 +45,7 @@ new Vue({
       },
       {
         id: 5,
-        picture: 'images/cc.jpg',
+        picture: 'images/SecretsOfDivineLove.jpg',
         name: "Cloud computing",
         description:
         "Cloud computing―accessing computing resources over the Internet―is rapidly changing the landscape of information technology. Its primary benefits compared to on-premise computing models are reduced costs and increased agility and scalability. Hence, cloud computing is receiving considerable interest among several stakeholders―businesses, the IT industry, application developers, researchers, and students.",
@@ -54,7 +54,7 @@ new Vue({
       },
       {
         id: 6,
-        picture: 'images/ikl.jpg',
+        picture: 'images/StoriesOfTheProphets.png',
         name: "Indian kavya literature(Hardcover)",
         description:
         "It is multi-volume series work. The main pupose of this work is literary criticism, evaluating a great tradition of literature and to presen comprehensive study of sanskrit literature. So far 6 volumes have been published. Each volume presents literature itself in successive periods of its development. This second volume in the series on Kavya Literature begins the description of the literature itself.",
@@ -63,7 +63,7 @@ new Vue({
       },
       {
         id: 7,
-        picture: 'images/book.jpg',
+        picture: 'images/TheRoadToMecca.jpg',
         name: "book",
         description:
         "It is multi-volume series work. The main pupose of this work is literary criticism, evaluating a great tradition of literature and to presen comprehensive study of sanskrit literature. So far 6 volumes have been published. Each volume presents literature itself in successive periods of its development. This second volume in the series on Kavya Literature begins the description of the literature itself.",
@@ -90,7 +90,7 @@ new Vue({
     currency: function(value) {
       var formatter = new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency: "INR",
+        currency: "PKR",
         minimumFractionDigits: 0
       });
       return formatter.format(value);
