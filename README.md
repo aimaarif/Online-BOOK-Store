@@ -1,2 +1,2 @@
-#Online BOOk Store
+#Using HTML, CSS, BOOTSTRAP and JavaScript.
 #
