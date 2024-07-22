@@ -8,67 +8,58 @@ new Vue({
     },
     products: [
       {
-        id: 1,
-        picture:'images/FortressOfTheMuslimInvocations.png',
-        name: "The Meghaduta of Kalidasa(Sanskrit)",
-        description:
-        "Meghadūta is a lyric poem written by Kālidāsa, considered to be one of the greatest Sanskrit poets.A poem of 111 stanzas, it is one of Kālidāsa's most famous works. The work is divided into two parts, Purva-megha and Uttara-megha",
-        price: 199,
-        inStock: 50
-      },
-      {
         id: 2,
         picture: 'images/GreatWomenOfIslam.png',
-        name: "Bilhaneeyam(Telugu)",
+        name: "Great Women Of Islam",
         description:
-        "story of Bilhana, Who wrote vikramankadeva charitam in sanskrit.",
-        price: 75,
+        "There are good examples in the lifestyle of the Mothers of the believers and women Companions especially for Muslim women. It is necessary for all of us to study the Seerah of these noble and fortunate women. Besides the Mothers of the believers, the compiler of the book has included the description of those sixteen women who had been given the good news of the paradise in this world by Prophet Muhammad (pbuh).",
+        price: 475,
         inStock: 755
       },
       {
         id: 3,
-        picture: 'images/IslamicEmpires.jpg',
-        name: "Word Power Made Easy",
+        picture: 'images/LostIslamicHistory.png',
+        name: "Lost ISlamic History",
         description:
-        "For use in schools and libraries only. Exercises designed to develop vocabulary skills present words together with their pronunciations, definitions and use in sentences.",
-        price: 149,
+       "Throughout, the impact of Islamic belief on scientific advancement, social structures, and cultural development is given due prominence, and the text is complemented by portraits of key personalities, inventions and little known historical nuggets. The history of Islam and of the world’s Muslims brings together diverse peoples, geographies and states, all interwoven into one narrative that begins with Muhammad (sallallahu alaihi wassalum) and continues to this day.",
+        price: 1149,
         inStock: 5
       },
       {
         id: 4,
-        picture: 'images/PurificationOfTheHeart.webp',
-        name: "Madhushala",
+        picture: 'images/Doth.png',
+        name: "Diseases of the Hearts & their Cures",
         description:
-        "Madhushala is a book of 135 quatrains: verses of four lines by Hindi poet and writer Harivansh Rai Bachchan.",
-        price: 100,
-        inStock: 123
+        "Translated by Abu Rumaysah “Know O beloved reader that it is most important to spend one’s time and energy in treating the heart, and hastening to correct and purify it from sickness and all sins. This is due to the heart occupying a great and lofty position in Islaam, for it is the place to which the Lord looks and the storehouse for tawheed, faith, and sincerity. Actions are distinguished, one from the other, with respect to their excellence in the Sight of Allah in accordance with the condition of the heart, not by their number or form, but rather due to the strength of the caller, his or her truthfulness, his or her sincerity and the extent to which he or she prefers Allah over himself or herself",
+        price: 1395,
+        inStock: 2
+      },
+      {
+        id: 1,
+        picture: 'images/FOTMI.jpg',
+        name: "Fortress Of The Muslim",
+        description:
+        "Author: Said Bin Wahf Al-Qahtani Publisher: Darussalam Pages: 244 Translation of Hisnul-Muslim. (‘Citadel of the Believer’) This is a very beautiful booklet consists of many authentic Dua’s (supplications) for a Muslim to supplicate on a daily basis and on special occasions.",
+        price: 365,
+        inStock: 50
       },
       {
         id: 5,
-        picture: 'images/SecretsOfDivineLove.jpg',
-        name: "Cloud computing",
+        picture: 'images/AITTW.png',
+        name: "An Inspiration To The World",
         description:
-        "Cloud computing―accessing computing resources over the Internet―is rapidly changing the landscape of information technology. Its primary benefits compared to on-premise computing models are reduced costs and increased agility and scalability. Hence, cloud computing is receiving considerable interest among several stakeholders―businesses, the IT industry, application developers, researchers, and students.",
-        price: 676,
+        "A Prophetic Biography Unlike Any Other! Unlike any book of Seerah that came before it. Based on authentic reports. Connecting the Seerah to our everyday, modern lives. Beyond biography – a project towards reformation of character. To guide you through all aspects and circumstances of life.",
+        price: 4075,
         inStock: 20
       },
       {
         id: 6,
         picture: 'images/StoriesOfTheProphets.png',
-        name: "Indian kavya literature(Hardcover)",
+        name: "Stories of the Prophets",
         description:
-        "It is multi-volume series work. The main pupose of this work is literary criticism, evaluating a great tradition of literature and to presen comprehensive study of sanskrit literature. So far 6 volumes have been published. Each volume presents literature itself in successive periods of its development. This second volume in the series on Kavya Literature begins the description of the literature itself.",
-        price: 5000,
+        "This classical work by the great scholar Ibn Kathir shares detailed information about the lives of the  Prophets mentioned by name in the Quran and Sunnah. The stories inclusively present whatever is known about these blessed individuals: the circumstances of their spreading the message, the nations where they lived, how they were treated, their unique trials and the results of their teaching. As one reads through the accounts, Allah’s reasons for sending the Prophets are unveiled. The distinct style of writing makes it easy for both adults and children to understand and makes a valuable addition to a Muslim family library.",
+        price: 1995,
         inStock: 12
-      },
-      {
-        id: 7,
-        picture: 'images/TheRoadToMecca.jpg',
-        name: "book",
-        description:
-        "It is multi-volume series work. The main pupose of this work is literary criticism, evaluating a great tradition of literature and to presen comprehensive study of sanskrit literature. So far 6 volumes have been published. Each volume presents literature itself in successive periods of its development. This second volume in the series on Kavya Literature begins the description of the literature itself.",
-        price: 345,
-        inStock: 10
       },
 
 

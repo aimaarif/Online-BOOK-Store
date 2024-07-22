@@ -16,136 +16,117 @@
 <body background="images/download.jpg">
   <div class="head1">Aim Book Store</div>
   <div id="app">
-  <div class="container">
-    <nav class="well well-sm">
-      <button class="btn btn-primary" @click.prevent="isShowingCart = false"><strong>Home</strong></button>
+    <div class="container">
+      <nav class="well well-sm">
+        <button class="btn btn-primary" @click.prevent="isShowingCart = false"><strong>Home</strong></button>
         <div class="text-right pull-right">
-    <span class="stats">
-      {{ cart.items.length }}
-      <template v-if="cart.items.length == 1">item</template>
-      <template v-else>items</template>
-      in cart, totalling {{ cartTotal | currency }}
-      <button class="btn btn-primary" @click="isShowingCart = true">View Cart</button>
-    </span>
-
-    </nav>
-
-  <div class="container">
-    <div v-if="!isShowingCart" id="products" class="row">
-    <div v-for="product in products" :class="groupWrapper"  class="item  col-xs-4 col-lg-4">
-    <div class="thumbnail">
-    <img class="group list-group-image" :src="product.picture" alt="" />
-    <div class="caption">
-      <h4 class="group inner list-group-item-heading">
-       {{product.name}}</h4>
-      <p class="group inner list-group-item-text">
-        {{product.description}}</p>
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-          <p class="lead">
-            {{product.price | currency}}</p>
+          <span class="stats">
+            {{ cart.items.length }}
+            <template v-if="cart.items.length == 1">item</template>
+            <template v-else>items</template>
+            in cart, total {{ cartTotal | currency }}
+            <button class="btn btn-primary" @click="isShowingCart = true">View Cart</button>
+          </span>
         </div>
-        <div class="col-xs-8 flex flex-row align-center justify-right">
-          <div class="number-in-stock" :class="{ few: product.inStock < 10 && product.inStock > 0, none: product.inStock == 0 }" >
-             {{ product.inStock }} in stock
+      </nav>
+
+      <div v-if="!isShowingCart" id="products" class="row">
+        <div v-for="product in products" :class="groupWrapper" class="item col-xs-4 col-lg-4">
+          <div class="thumbnail">
+            <img class="group list-group-image" :src="product.picture" alt="" />
+            <div class="caption">
+              <h4 class="group inner list-group-item-heading">
+                {{product.name}}</h4>
+              <p class="group inner list-group-item-text">
+                {{product.description}}</p>
+              <div class="row">
+                <div class="col-xs-12 col-md-6">
+                  <p class="lead">
+                    {{product.price | currency}}</p>
+                </div>
+                <div class="col-xs-8 flex flex-row align-center justify-right">
+                  <div class="number-in-stock" :class="{ few: product.inStock < 10 && product.inStock > 0, none: product.inStock == 0 }" >
+                    {{ product.inStock }} in stock
+                  </div>
+                  <button class="btn btn-success" @click="addProductToCart(product)" :disabled="product.inStock == 0">Add to cart</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <button class="btn btn-success" @click="addProductToCart(product)" :disabled="product.inStock == 0" >Add to cart</button>
         </div>
+      </div>
+
+      <div v-else>
+        <h1>Cart</h1>
+        <table v-if="cart.items.length > 0" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in cart.items">
+              <td>{{ item.product.name }}</td>
+              <td>
+                {{ item.quantity }} &nbsp;
+              </td>
+              <td>{{ item.quantity * item.product.price | currency }}</td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <form>
+                  <br>Customer Name:<br>
+                  <input type="text" name="cname" required>
+                  <br>H no/Flat/Desk No.:<br>
+                  <input type="text" name="add1" required>
+                  <br>Colony:<br>
+                  <input type="text" name="add2" required>
+                  <br>City:<br>
+                  <input type="text" name="city" required>
+                  <br>District:<br>
+                  <input type="text" name="dist" required>
+                  <br>State:<br>
+                  <input type="text" name="state" required>
+                  <br>PIN Code:<br>
+                  <input type="number" name="PIN" required>
+                  <br><br>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td class="text-right" colspan="2">
+                <strong>Subtotal</strong>
+              </td>
+              <td>{{ cartTotal | currency }}</td>
+            </tr>
+            <tr>
+              <td class="text-right" colspan="2">
+                <strong>Taxes</strong>
+              </td>
+              <td>{{ taxAmount | currency }}</td>
+            </tr>
+            <tr>
+              <td class="text-right" colspan="2">
+                <strong>Grand total</strong>
+              </td>
+              <td>{{ cartTotal + taxAmount | currency }}</td>
+            </tr>
+            <tr>
+              <td colspan="2"></td>
+              <td><button class="btn btn-success" @click="checkout">Checkout</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <p v-else>Your cart is currently empty.</p>
       </div>
     </div>
   </div>
-    </div>
-  </div>
-
-
-  <div v-else>
-    <h1>Cart</h1>
-    <table v-if="cart.items.length > 0" class="table table-striped">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="item in cart.items">
-          <td>{{ item.product.name }}</td>
-          <td>
-            {{ item.quantity }} &nbsp;
-
-          </td>
-          <td>{{ item.quantity * item.product.price | currency }}</td>
-        </tr>
-        <tr>
-          <form>
-          <br>Customer Name:<br>
-          <input type="text" name="cname" required>
-          <br>H no/Flat/Desk No.:<br>
-          <input type="text" name="add1" required>
-          <br>Colony:<br>
-          <input type="text" name="add2" required>
-          <br>City:<br>
-          <input type="text" name="city" required>
-          <br>District:<br>
-          <input type="text" name="dist" required>
-          <br>State:<br>
-          <input type="text" name="state" required>
-          <br>PIN Code:<br>
-          <input type="number" name="PIN" required>
-          <br><br>
-          </form>
-        </tr>
-        <tr>
-          <td class="text-right" colspan="2">
-            <strong>Subtotal</strong>
-          </td>
-
-          <td>{{ cartTotal | currency }}</td>
-        </tr>
-
-        <tr>
-          <td class="text-right" colspan="2">
-            <strong>Taxes</strong>
-          </td>
-          <td>{{ taxAmount | currency }}</td>
-        </tr>
-
-        <tr>
-          <td class="text-right" colspan="2">
-            <strong>Grand total</strong>
-          </td>
-
-          <td>{{ cartTotal + taxAmount | currency }}</td>
-        </tr>
-
-        <tr>
-          <td colspan="2"></td>
-          <td><button class="btn btn-success" @click="checkout">Checkout</button></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p v-else>Your cart is currently empty.</p>
-
-
-
-  </div>
-  </div>
-
-
-  </div>
-</div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
-
-
-
-    <script  src="js/index.js"></script>
-
-
-
-
+  <script src="js/index.js"></script>
 </body>
+
 
 </html>
