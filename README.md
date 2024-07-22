@@ -42,6 +42,9 @@ cd aim-book-store
 
 3.Open the index.html file in your web browser to view the project.
 
+<img src="images/Screenshot (83).png" alt="image" width="500" heigth="300"/>
+<img src="images/Screenshot (84).png" alt="image" width="500" heigth="300"/>
+
 Usage
 Home Page: View the list of available books.
 Add to Cart: Click the "Add to cart" button to add a book to your cart.
